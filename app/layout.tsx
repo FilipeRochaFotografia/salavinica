@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import { Inter, Marcellus } from 'next/font/google';
+import { Inter } from 'next/font/google';
+import localFont from 'next/font/local';
 import './globals.css';
 
 const inter = Inter({
@@ -7,21 +8,21 @@ const inter = Inter({
   variable: '--font-inter',
 });
 
-const marcellus = Marcellus({
-  weight: '400',
-  subsets: ['latin'],
-  variable: '--font-felix', // Using Marcellus as the closest Google Font to Felix Titling
+const felix = localFont({
+  src: './fonts/felix.ttf',
+  variable: '--font-felix',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
-  title: 'Sala Vínica — Armazém do Peixe',
-  description: 'Premium digital wine menu experience',
+  title: 'Jantar Vínico',
+  description: 'Uma experiência guiada',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt" className={`${inter.variable} ${marcellus.variable}`}>
-      <body className="bg-background text-light antialiased selection:bg-primary selection:text-light">
+    <html lang="pt" className={`${inter.variable} ${felix.variable}`} suppressHydrationWarning>
+      <body className="bg-background text-light antialiased selection:bg-primary selection:text-light" suppressHydrationWarning>
         {children}
       </body>
     </html>

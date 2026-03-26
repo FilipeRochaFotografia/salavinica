@@ -1,63 +1,52 @@
 import Link from 'next/link';
 import { FloatingHeader } from '@/components/FloatingHeader';
-import { Utensils, Wine } from 'lucide-react';
 import Image from 'next/image';
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col relative bg-background">
+    <main className="min-h-screen flex flex-col relative bg-background overflow-hidden selection:bg-primary selection:text-light">
       <FloatingHeader />
 
-      <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 pt-24 pb-12">
-        <div className="text-center mb-16 space-y-6">
-          <div className="flex justify-center mb-4">
-            <Image 
-              src="https://i.ibb.co/1WQRpKT/Design-sem-nome.png" 
-              alt="Sala Vínica Logo" 
-              width={56} 
-              height={56} 
-              className="object-contain opacity-90"
-              referrerPolicy="no-referrer"
-            />
+      {/* Deep burgundy glow effect */}
+      <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_top,_var(--color-deep-wine)_0%,_transparent_60%)] opacity-40 pointer-events-none" />
+      <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_bottom,_var(--color-primary)_0%,_transparent_40%)] opacity-10 pointer-events-none" />
+      
+      <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 pt-32 pb-12">
+        <div className="text-center space-y-8 max-w-lg mx-auto mb-8">
+          <div className="space-y-4 flex flex-col items-center">
+            <div className="relative w-16 h-10 mb-2 opacity-80">
+              <Image 
+                src="/logo/logoprincipal.png" 
+                alt="Sala Vínica" 
+                fill
+                className="object-contain"
+              />
+            </div>
+            <h2 className="font-serif text-[11px] text-accent/80 font-semibold uppercase tracking-[0.4em]">Menu Exclusivo</h2>
+            <div className="relative w-64 h-32 md:w-80 md:h-40 mt-6">
+              <Image 
+                src="/logo/jantarvinico.png" 
+                alt="Jantar Vínico Logo" 
+                fill
+                className="object-contain drop-shadow-2xl"
+              />
+            </div>
           </div>
-          <h1 className="font-serif text-5xl md:text-6xl text-light tracking-wide">
-            Sala Vínica
-          </h1>
-          <p className="text-light/70 text-lg md:text-xl font-light max-w-xs mx-auto">
-            Como prefere escolher o seu vinho?
+          
+          <div className="h-px w-16 bg-light/10 mx-auto" />
+
+          <p className="text-light/70 text-base md:text-lg font-light leading-relaxed px-4">
+            Uma viagem sensorial guiada. Seis momentos pensados ao detalhe, onde vinho e gastronomia se encontram numa experiência perfeitamente harmonizada.
           </p>
         </div>
 
-        <div className="w-full max-w-md space-y-4 flex flex-col mt-auto mb-8">
+        <div className="w-full max-w-xs mx-auto text-center">
           <Link 
-            href="/pratos"
-            className="group relative overflow-hidden rounded-2xl bg-[#141414] border border-light/5 p-6 flex items-center gap-6 transition-all hover:bg-[#1A1A1A] active:scale-[0.98]"
+            href="/menu"
+            className="group relative w-full overflow-hidden rounded-full bg-light/5 border border-light/10 py-5 flex items-center justify-center transition-all hover:bg-light/10 hover:border-light/20 hover:-translate-y-1 active:scale-[0.98] shadow-2xl"
           >
-            <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-light transition-colors">
-              <Utensils size={24} strokeWidth={1.5} />
-            </div>
-            <div className="flex-1 text-left">
-              <h3 className="font-serif text-xl text-light mb-1">Escolher por prato</h3>
-              <p className="text-sm text-light/50 font-light">Encontre a harmonização perfeita</p>
-            </div>
+            <span className="font-serif text-lg tracking-[0.1em] uppercase text-light group-hover:text-white transition-colors">Iniciar percurso</span>
           </Link>
-
-          <Link 
-            href="/vinhos"
-            className="group relative overflow-hidden rounded-2xl bg-[#141414] border border-light/5 p-6 flex items-center gap-6 transition-all hover:bg-[#1A1A1A] active:scale-[0.98]"
-          >
-            <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-light transition-colors">
-              <Wine size={24} strokeWidth={1.5} />
-            </div>
-            <div className="flex-1 text-left">
-              <h3 className="font-serif text-xl text-light mb-1">Explorar vinhos</h3>
-              <p className="text-sm text-light/50 font-light">Navegue pela nossa garrafeira</p>
-            </div>
-          </Link>
-        </div>
-        
-        <div className="mt-auto text-center">
-          <p className="text-[10px] text-light/30 uppercase tracking-[0.2em]">Armazém do Peixe</p>
         </div>
       </div>
     </main>
