@@ -60,7 +60,7 @@ export default async function MomentDetail(props: { params: Promise<{ id: string
                 className="object-contain"
               />
             </div>
-            <h2 className="font-serif text-2xl text-accent text-center mb-2 leading-tight">{moment.wine.name}</h2>
+            <h2 className="font-serif text-2xl text-accent text-center mb-2 leading-tight whitespace-pre-line">{moment.wine.name}</h2>
             <p className="text-sm font-light text-light/50 text-center px-4 mb-4 leading-relaxed">{moment.wine.shortDescription}</p>
             
             <div className="flex items-center gap-2 font-serif text-xs text-primary/80 uppercase tracking-widest">

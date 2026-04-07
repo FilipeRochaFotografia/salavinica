@@ -85,7 +85,7 @@ export const dinnerWines: Record<WineId, DinnerWine> = {
   'quinta-crasto-superior-branco': {
     id: 'quinta-crasto-superior-branco',
     slug: 'quinta-crasto-superior-branco',
-    name: 'Quinta do Crasto Superior Branco',
+    name: 'Quinta do Crasto\nSuperior Branco',
     producer: 'Quinta do Crasto',
     region: 'Douro Superior',
     type: 'Branco',
@@ -111,7 +111,7 @@ export const dinnerWines: Record<WineId, DinnerWine> = {
   'quinta-crasto-reserva-vinhas-velhas': {
     id: 'quinta-crasto-reserva-vinhas-velhas',
     slug: 'quinta-crasto-reserva-vinhas-velhas',
-    name: 'Quinta do Crasto Reserva Vinhas Velhas',
+    name: 'Quinta do Crasto\nReserva Vinhas Velhas',
     producer: 'Quinta do Crasto',
     region: 'Douro',
     type: 'Tinto',

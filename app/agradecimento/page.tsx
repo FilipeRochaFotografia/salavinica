@@ -26,7 +26,7 @@ export default function Agradecimento() {
                 className="object-contain"
               />
             </div>
-            <h1 className="font-serif text-3xl text-light tracking-[0.1em] uppercase mb-4 mt-8">Obrigado</h1>
+            <h1 className="font-serif text-3xl text-accent tracking-[0.1em] uppercase mb-4 mt-8">Obrigado</h1>
           </StaggerItem>
 
           <StaggerItem className="h-px w-16 bg-light/10 mx-auto" />
@@ -41,9 +41,9 @@ export default function Agradecimento() {
         <FadeIn delay={0.6} className="w-full max-w-xs mx-auto text-center mt-8">
           <Link
             href="/"
-            className="group relative w-full overflow-hidden rounded-full bg-light/5 border border-light/10 py-5 flex items-center justify-center transition-all hover:bg-light/10 hover:border-light/20 hover:-translate-y-1 active:scale-[0.98] shadow-2xl"
+            className="group relative w-full overflow-hidden rounded-full bg-primary/10 backdrop-blur-md border border-primary/20 py-5 flex items-center justify-center transition-all hover:bg-primary/20 hover:border-primary/30 hover:-translate-y-1 active:scale-[0.98] shadow-2xl"
           >
-            <span className="font-serif text-lg tracking-[0.1em] uppercase text-light group-hover:text-white transition-colors">Voltar ao Início</span>
+            <span className="font-serif text-lg tracking-[0.1em] uppercase text-accent group-hover:text-accent/90 transition-colors">Voltar ao Início</span>
           </Link>
         </FadeIn>
       </div>

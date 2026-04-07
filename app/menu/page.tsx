@@ -46,7 +46,7 @@ export default function MenuOverview() {
                 {/* Card */}
                 <div className="flex-1 bg-primary/10 backdrop-blur-md border border-primary/20 rounded-2xl p-5 flex items-center shadow-2xl transition-all duration-300 group-hover:bg-primary/20 group-hover:border-primary/30 group-hover:-translate-y-1">
                   <div className="flex-1 pb-1">
-                    <h3 className="font-serif text-[17px] text-accent mb-1.5 leading-tight">{moment.wine.name}</h3>
+                    <h3 className="font-serif text-[17px] text-accent mb-1.5 leading-tight whitespace-pre-line">{moment.wine.name}</h3>
                     <p className="text-[13px] text-light/60 font-light italic leading-snug">C/ {moment.dish.name}</p>
                   </div>
                   <ChevronRight size={18} className="text-light/20 group-hover:text-primary transition-colors ml-4 shrink-0" strokeWidth={1.5} />
