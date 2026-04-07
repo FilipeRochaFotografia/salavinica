@@ -60,7 +60,7 @@ export default async function MomentDetail(props: { params: Promise<{ id: string
                 className="object-contain"
               />
             </div>
-            <h2 className="font-serif text-2xl text-light text-center mb-2 leading-tight">{moment.wine.name}</h2>
+            <h2 className="font-serif text-2xl text-accent text-center mb-2 leading-tight">{moment.wine.name}</h2>
             <p className="text-sm font-light text-light/50 text-center px-4 mb-4 leading-relaxed">{moment.wine.shortDescription}</p>
             
             <div className="flex items-center gap-2 font-serif text-xs text-primary/80 uppercase tracking-widest">
@@ -83,7 +83,7 @@ export default async function MomentDetail(props: { params: Promise<{ id: string
                 className="object-cover opacity-80"
               />
             </div>
-            <h3 className="font-serif text-xl text-light text-center mb-2 leading-tight">{moment.dish.name}</h3>
+            <h3 className="font-serif text-xl text-accent text-center mb-2 leading-tight">{moment.dish.name}</h3>
             <p className="text-sm font-light text-light/50 text-center px-4 mb-4 leading-relaxed">{moment.dish.shortDescription}</p>
             
             <div className="flex items-center gap-2 font-serif text-xs text-accent/80 uppercase tracking-widest">
@@ -94,9 +94,9 @@ export default async function MomentDetail(props: { params: Promise<{ id: string
         </StaggerContainer>
 
         {/* Editorial Text */}
-        <FadeIn delay={0.6} className="bg-light/5 backdrop-blur-md border border-light/10 rounded-3xl p-8 mb-16 relative shadow-2xl">
-          <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-background/60 backdrop-blur-sm px-4 rounded-full border border-light/10">
-            <span className="font-serif text-[10px] uppercase tracking-[0.3em] text-light/70">A Harmonização</span>
+        <FadeIn delay={0.6} className="bg-primary/10 backdrop-blur-md border border-primary/20 rounded-3xl p-8 mb-16 relative shadow-2xl">
+          <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-background/60 backdrop-blur-sm px-4 rounded-full border border-primary/20">
+            <span className="font-serif text-[10px] uppercase tracking-[0.3em] text-accent">A Harmonização</span>
           </div>
           <p className="text-lg text-light/90 leading-relaxed text-center italic">
             "{moment.editorialPairing}"
@@ -107,12 +107,12 @@ export default async function MomentDetail(props: { params: Promise<{ id: string
         <StaggerContainer delay={0.7} className="space-y-12 mb-16 px-2">
           <StaggerItem>
             <section>
-            <h4 className="text-xl border-b border-light/10 pb-4 mb-4 text-light/80">O Vinho em Detalhe</h4>
+            <h4 className="font-serif text-xl border-b border-light/10 pb-4 mb-4 text-accent">O Vinho em Detalhe</h4>
             <div className="space-y-4 font-light text-sm text-light/60">
               <p className="leading-relaxed">{moment.wine.longDescription}</p>
               <div className="grid grid-cols-2 gap-6 pt-4">
                 <div>
-                  <span className="block font-serif text-[11px] font-medium uppercase tracking-widest text-light/30 mb-2">Estrutura</span>
+                  <span className="block font-serif text-[11px] font-medium uppercase tracking-widest text-accent mb-2">Estrutura</span>
                   <ul className="space-y-1.5">
                     <li>Acidez: <span className="text-light/80">{moment.wine.sensoryProfile.acidity}</span></li>
                     <li>Corpo: <span className="text-light/80">{moment.wine.sensoryProfile.body}</span></li>
@@ -120,7 +120,7 @@ export default async function MomentDetail(props: { params: Promise<{ id: string
                   </ul>
                 </div>
                 <div>
-                  <span className="block font-serif text-[11px] font-medium uppercase tracking-widest text-light/30 mb-2">Serviço</span>
+                  <span className="block font-serif text-[11px] font-medium uppercase tracking-widest text-accent mb-2">Serviço</span>
                   <ul className="space-y-1.5">
                     <li>Temp: <span className="text-light/80">{moment.wine.serviceTemperature}</span></li>
                     <li>Copo: <span className="text-light/80">{moment.wine.recommendedGlass}</span></li>
@@ -134,7 +134,7 @@ export default async function MomentDetail(props: { params: Promise<{ id: string
 
           <StaggerItem>
             <section>
-              <h4 className="text-xl border-b border-light/10 pb-4 mb-4 text-light/80">O Prato em Detalhe</h4>
+              <h4 className="font-serif text-xl border-b border-light/10 pb-4 mb-4 text-accent">O Prato em Detalhe</h4>
             <div className="space-y-4 font-light text-sm text-light/60">
               <p className="leading-relaxed">{moment.dish.longDescription}</p>
             </div>

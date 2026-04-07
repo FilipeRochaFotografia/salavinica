@@ -27,7 +27,7 @@ export default function MenuOverview() {
               className="object-contain"
             />
           </div>
-          <h1 className="font-serif text-3xl text-light tracking-[0.1em] uppercase mb-4">O Percurso</h1>
+          <h1 className="font-serif text-3xl text-accent tracking-[0.1em] uppercase mb-4">O Percurso</h1>
           <div className="h-px w-12 bg-primary/50 mx-auto" />
         </FadeIn>
 
@@ -44,9 +44,9 @@ export default function MenuOverview() {
                 </div>
 
                 {/* Card */}
-                <div className="flex-1 bg-light/5 backdrop-blur-md border border-light/10 rounded-2xl p-5 flex items-center shadow-2xl transition-all duration-300 group-hover:bg-light/10 group-hover:border-light/20 group-hover:-translate-y-1">
+                <div className="flex-1 bg-primary/10 backdrop-blur-md border border-primary/20 rounded-2xl p-5 flex items-center shadow-2xl transition-all duration-300 group-hover:bg-primary/20 group-hover:border-primary/30 group-hover:-translate-y-1">
                   <div className="flex-1 pb-1">
-                    <h3 className="font-serif text-[17px] text-light mb-1.5 leading-tight">{moment.wine.name}</h3>
+                    <h3 className="font-serif text-[17px] text-accent mb-1.5 leading-tight">{moment.wine.name}</h3>
                     <p className="text-[13px] text-light/60 font-light italic leading-snug">C/ {moment.dish.name}</p>
                   </div>
                   <ChevronRight size={18} className="text-light/20 group-hover:text-primary transition-colors ml-4 shrink-0" strokeWidth={1.5} />
